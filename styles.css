@@ -21,10 +21,12 @@ body {
 }
 .container {
   margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
 }
+
 .card {
-  width: 68%;
-  margin: 0 auto 4rem auto;
   padding: 1rem;
   border: 1px solid rgb(66, 66, 66);
   border-radius: 12px;
@@ -66,4 +68,15 @@ body {
   height: 24px;
   vertical-align: bottom;
   display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+  .card__img {
+    width: 68%;
+  }
 }
