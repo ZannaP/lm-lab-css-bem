@@ -36,8 +36,12 @@ body {
 .card__img {
   margin: 12px auto;
   display: block;
-  width: 90%;
   border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 88%;
+  height: 30vh;
 }
 .card__heading {
   text-align: center;
@@ -69,6 +73,12 @@ body {
   vertical-align: bottom;
   display: inline-block;
 }
+.card_img--vader {
+  background-image: url("./images/vader.jpeg");
+}
+.card_img--yoda {
+  background-image: url("./images/yoda.jpeg");
+}
 
 @media (min-width: 1024px) {
   .container {
@@ -76,7 +86,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 4rem;
   }
+}
+
+@media (min-width: 1536px) {
   .card__img {
-    width: 68%;
+    height: 42vh;
   }
 }
